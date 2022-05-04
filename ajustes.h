@@ -17,5 +17,5 @@ struct tAjustes { //Guarda ajustes básicos
 };
 
 //funciones
-tAjustes incializarAjustes(int numFichas, int iniFichas, int numJugadores); //inicializa los ajustes indicados
+tAjustes inicializarAjustes(int numFichas, int iniFichas, int numJugadores); //inicializa los ajustes indicados
 #endif

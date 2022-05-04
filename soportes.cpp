@@ -3,10 +3,6 @@
 #include <string>
 #include <iomanip>
 
-#include "colores.h"
-#include "fichas.h"
-#include "bolsa.h"
-#include "soporte.h"
 #include "soportes.h"
 
 using namespace std;
@@ -17,14 +13,8 @@ void repartir(tBolsa& bolsa, tSoportes& soportes, const tAjustes& ajustes) { //R
 
 	for (int j = 0; j < ajustes.numJugadores; j++) {
 		for (int i = 0; i < ajustes.iniFichas; i++) {
-			//Sacamos una ficha del archivo
-			cin >> filacolor;
-			cin >> num;
-			aux.num = num + 1;
-			inicializarColor(aux, filacolor);
-
 			//La sacamos de la bolsa y la ponemos en el soporte
-			soportes[j].fichas[i] = sacarFicha(bolsa, aux, filacolor, ajustes);
+			soportes[j].fichas[i] = sacarFicha(bolsa, ajustes);
 			soportes[j].contador++;
 		}
 	}

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef jugadas_h
+#define jugadas_h
 
 #include <iostream>
 #include <fstream>
@@ -22,3 +23,4 @@ bool esSerie(const tJugada& jugada); // Comprueba si una jugada es serie
 void nuevaJugada(tSoporte& soporte, tJugada& jugada, int& jcont); //Crea una nueva jugada con fichas del soporte
 bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada); // Devuelve true si puede poner la ficha y falso en otro caso 
 void ponerFicha(tJugada& jugada, tFicha& ficha, bool iniciojugada); // Coloca la ficha
+#endif

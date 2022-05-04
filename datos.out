@@ -1,3 +1,4 @@
+
 Bolsa...
 rojo 1  rojo 2  rojo 3  rojo 4  rojo 5  rojo 6  rojo 7  rojo 8
 verd 1  verd 2  verd 3  verd 4  verd 5  verd 6  verd 7  verd 8
@@ -7,7 +8,6 @@ rojo 1  rojo 2  rojo 3  rojo 4  rojo 5  rojo 6  rojo 7  rojo 8
 verd 1  verd 2  verd 3  verd 4  verd 5  verd 6  verd 7  verd 8
 azul 1  azul 2  azul 3  azul 4  azul 5  azul 6  azul 7  azul 8
 amar 1  amar 2  amar 3  amar 4  amar 5  amar 6  amar 7  amar 8
-
 
 Fichas de la bolsa con todas las fichas repartidas
 
@@ -30,7 +30,15 @@ Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 8  amar 7
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
 Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 8  amar 7  
               1       2       3       4       5       6  
-Fichas (0 al final): 2 3 4 Jugada: rojo 3  rojo 6  azul 7  
+
+    Fichas (0 al final): 2 3 4 0
+Jugada: rojo 3  rojo 6  azul 7  
+Tablero:
+
+
+Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 8  amar 7  
+
+
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
 Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 8  amar 7  azul 7  
 
@@ -38,132 +46,237 @@ Turno para el jugador 1 ...
 Soporte: azul 4  amar 8  azul 5  amar 6  azul 6  rojo 1  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-azul 4 azul 5 azul 6 
+azul 4  azul 5  azul 6  
 Soporte: rojo 1  azul 4  azul 5  azul 6  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
 Soporte: rojo 1  azul 4  azul 5  azul 6  amar 6  amar 8  
               1       2       3       4       5       6  
-Fichas (0 al final): 4 5 6 Jugada: azul 6  amar 6  amar 8  
+
+    Fichas (0 al final): 4 5 6 0
+Jugada: azul 6  amar 6  amar 8  
+Tablero:
+
+
+Soporte: rojo 1  azul 4  azul 5  azul 6  amar 6  amar 8  
+
+
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
 Soporte: rojo 1  azul 4  azul 5  azul 6  amar 6  amar 8  
               1       2       3       4       5       6  
-Fichas (0 al final): 2 3 4 Jugada: azul 4  azul 5  azul 6  
+
+    Fichas (0 al final): 2 3 4 0
+Jugada: azul 4  azul 5  azul 6    - Escalera correcta!
+
+Tablero:
+ 1: azul 4  azul 5  azul 6  
+
+
+Soporte: rojo 1  amar 6  amar 8  
+
+
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 1  azul 4  azul 5  azul 6  amar 6  amar 8  amar 1  
-
 Turno para el jugador 2 ...
 Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 8  amar 7  azul 7  
 
-1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  1
-Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  amar 7  azul 8  
-
-1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
-Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  amar 7  azul 8  
-              1       2       3       4       5       6       7  
-Fichas (0 al final): 3 Jugada: rojo 6  
-1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  5
-
-1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  2
-Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  azul 8  amar 7  
-
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
 Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  azul 8  amar 7  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  azul 8  amar 7  azul 5  
+Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  azul 8  amar 7  verd 5  
 
 Turno para el jugador 1 ...
-Soporte: rojo 1  azul 4  azul 5  azul 6  amar 6  amar 8  amar 1  
+Soporte: rojo 1  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-azul 4 azul 5 azul 6 
-Soporte: rojo 1  azul 4  azul 5  azul 6  amar 1  amar 6  amar 8  
+Soporte: rojo 1  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 1  azul 4  azul 5  azul 6  amar 1  amar 6  amar 8  verd 2  
+Soporte: rojo 1  amar 6  amar 8  verd 3  
 
 Turno para el jugador 2 ...
-Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  azul 8  amar 7  azul 5  
+Soporte: rojo 2  rojo 3  rojo 6  azul 7  azul 7  azul 8  amar 7  verd 5  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-Soporte: rojo 2  rojo 3  rojo 6  azul 5  azul 7  azul 7  azul 8  amar 7  
+Soporte: rojo 2  rojo 3  rojo 6  verd 5  azul 7  azul 7  azul 8  amar 7  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 2  rojo 3  rojo 6  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 2  
+Soporte: rojo 2  rojo 3  rojo 6  verd 5  azul 7  azul 7  azul 8  amar 7  azul 5  
 
 Turno para el jugador 1 ...
-Soporte: rojo 1  azul 4  azul 5  azul 6  amar 1  amar 6  amar 8  verd 2  
+Soporte: rojo 1  amar 6  amar 8  verd 3  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-azul 4 azul 5 azul 6 
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 6  amar 8  
+Soporte: rojo 1  verd 3  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 6  amar 8  amar 2  
+Soporte: rojo 1  verd 3  amar 6  amar 8  verd 2  
 
 Turno para el jugador 2 ...
-Soporte: rojo 2  rojo 3  rojo 6  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 2  
+Soporte: rojo 2  rojo 3  rojo 6  verd 5  azul 7  azul 7  azul 8  amar 7  azul 5  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-Soporte: rojo 2  rojo 2  rojo 3  rojo 6  azul 5  azul 7  azul 7  azul 8  amar 7  
+Soporte: rojo 2  rojo 3  rojo 6  verd 5  azul 5  azul 7  azul 7  azul 8  amar 7  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 2  rojo 2  rojo 3  rojo 6  azul 5  azul 7  azul 7  azul 8  amar 7  verd 6  
+Soporte: rojo 2  rojo 3  rojo 6  verd 5  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 2  
 
 Turno para el jugador 1 ...
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 6  amar 8  amar 2  
+Soporte: rojo 1  verd 3  amar 6  amar 8  verd 2  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-azul 4 azul 5 azul 6 
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 2  amar 6  amar 8  
+Soporte: rojo 1  verd 2  verd 3  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 2  amar 6  amar 8  amar 2  
+Soporte: rojo 1  verd 2  verd 3  amar 6  amar 8  amar 1  
 
 Turno para el jugador 2 ...
-Soporte: rojo 2  rojo 2  rojo 3  rojo 6  azul 5  azul 7  azul 7  azul 8  amar 7  verd 6  
+Soporte: rojo 2  rojo 3  rojo 6  verd 5  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 2  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 5  azul 5  azul 7  azul 7  azul 8  amar 7  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 5  
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 5  azul 5  azul 7  azul 7  azul 8  amar 7  verd 6  
 
 Turno para el jugador 1 ...
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 2  amar 6  amar 8  amar 2  
+Soporte: rojo 1  verd 2  verd 3  amar 6  amar 8  amar 1  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-azul 4 azul 5 azul 6 
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 2  amar 2  amar 6  amar 8  
+Soporte: rojo 1  verd 2  verd 3  amar 1  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 2  amar 2  amar 6  amar 8  verd 4  
+Soporte: rojo 1  verd 2  verd 3  amar 1  amar 6  amar 8  amar 2  
 
 Turno para el jugador 2 ...
-Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 5  
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 5  azul 5  azul 7  azul 7  azul 8  amar 7  verd 6  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-Soporte: rojo 2  rojo 2  rojo 3  rojo 5  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 5  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 5  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 5  
+
+Turno para el jugador 1 ...
+Soporte: rojo 1  verd 2  verd 3  amar 1  amar 6  amar 8  amar 2  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+Soporte: rojo 1  verd 2  verd 3  amar 1  amar 2  amar 6  amar 8  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Soporte: rojo 1  verd 2  verd 3  amar 1  amar 2  amar 6  amar 8  verd 4  
+
+Turno para el jugador 2 ...
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 5  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  rojo 5  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+rojo 5  verd 5  azul 5  
+Soporte: rojo 2  rojo 2  rojo 3  rojo 5  rojo 6  verd 5  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
-Soporte: rojo 2  rojo 2  rojo 3  rojo 5  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  
-              1       2       3       4       5       6       7       8       9      10      11  
-Fichas (0 al final): 4 6 8 Jugada: rojo 5  verd 6  azul 7  
+Soporte: rojo 2  rojo 2  rojo 3  rojo 5  rojo 6  verd 5  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  
+              1       2       3       4       5       6       7       8       9      10      11      12  
+
+    Fichas (0 al final): 4 6 8 0
+Jugada: rojo 5  verd 5  azul 5    - Serie correcta!
+
+Tablero:
+ 1: azul 4  azul 5  azul 6  
+ 2: rojo 5  verd 5  azul 5  
+
+
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 7  
+
+
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
-Soporte: rojo 2  rojo 2  rojo 3  rojo 5  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  amar 5  
-
 Turno para el jugador 1 ...
-Soporte: rojo 1  verd 2  azul 4  azul 5  azul 6  amar 1  amar 2  amar 2  amar 6  amar 8  verd 4  
-
-1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  2
-Soporte: rojo 1  verd 2  verd 4  azul 4  azul 5  azul 6  amar 1  amar 2  amar 2  amar 6  amar 8  
+Soporte: rojo 1  verd 2  verd 3  amar 1  amar 2  amar 6  amar 8  verd 4  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
-azul 4 azul 5 azul 6 
-Soporte: rojo 1  verd 2  verd 4  azul 4  azul 5  azul 6  amar 1  amar 2  amar 2  amar 6  amar 8  
+verd 2  verd 3  verd 4  
+Soporte: rojo 1  verd 2  verd 3  verd 4  amar 1  amar 2  amar 6  amar 8  
 
 1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
-Soporte: rojo 1  verd 2  verd 4  azul 4  azul 5  azul 6  amar 1  amar 2  amar 2  amar 6  amar 8  
-              1       2       3       4       5       6       7       8       9      10      11  
-Fichas (0 al final): Jugada: -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  0  -858993460  rojo -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  12  -858993460  -858993460  9  -858993460  -858993460  7339272  -1  14149682  7336444  7338648  4  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  0  0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 2  verd 7332156  7337656  2  7337656  2005676708  verd 2005676736  7332280  14  16  1  4292608  0  rojo -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460      -858993460  3  -858993460      -858993460  1  -858993460  azul -858993460  0  verd 1  azul 1      2      2  2  3  verd 3  azul 3  azul 3  3  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  11  rojo 2  rojo 2  rojo 3  rojo 5  rojo 6  verd 6  azul 5  azul 7  azul 7  azul 8  amar 7  amar 5  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  4  4  4  0      0  0  0  0  -858993460  -858993460  -858993460  -858993460  -858993460  1  verd 1  azul 1  amar 4  1  4  1  1  -858993460  -858993460  -858993460  -858993460  -858993460  2  verd 2  azul 2  amar 4  4  4  4  4  -858993460  -858993460  -858993460  -858993460  -858993460  4  4  3  amar 3      4  3  3  3  -858993460  -858993460  -858993460  -858993460  -858993460  0  verd 4  0  amar 0      4  4  0  0  -858993460  -858993460  -858993460  -858993460  -858993460  1  verd 4  1  amar 1      1  1  1  1  -858993460  -858993460  -858993460  -858993460  -858993460  2  verd 2  azul 2  amar 2      4  2  4  2  -858993460  -858993460  -858993460  -858993460  -858993460  3  verd 4  3  amar 3      3  4  4  4  -858993460  -858993460  -858993460  -858993460  -858993460  -858993460  8  2  -1834813252  14156684  14094396  4292608  rojo 2005884382  0  -1980563456  32  verd 7339272  707688633  14094396  -46758727  221184  11927732  4456540  6488169  6357064  6881380  7274582  6619245  7536725  6029427  6357109  6226031  6357091  7274564  6619245  6029427  -858993460  -858993460  -858993460  14196692  0  rojo 11696780  0  rojo 11696776  0  rojo 11696784  11738864  rojo 0  rojo 0  verd 11696776  rojo 0  rojo 0  rojo 14196684  rojo 0  rojo 0  6  rojo 0  rojo 0  rojo 11739536  rojo 7338888  rojo 32  rojo -858993460  2034341912  -858993460  0  rojo 0  0  rojo 11720644  0  rojo 11720640  0  rojo 11720648  11738136  rojo 0  rojo 0  verd 11720640  rojo 0  rojo 0  0  rojo 0  rojo 513  0  rojo 0  rojo 0  0  0  0  -1834811592  14180619  verd 7339316  1  11725408  verd 11695664  7339408  -1834811460  14094396  0  rojo 0  rojo 0  rojo 0  rojo 14211732  0  0  14171296  0  14161709  14162632  1995438633  1995438608  2006022814  -1699197083  rojo 0  0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 7339452  rojo 7339540  -313755383  rojo 7339548  -1  0  rojo 14094396  0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  rojo 0  
+Soporte: rojo 1  verd 2  verd 3  verd 4  amar 1  amar 2  amar 6  amar 8  
+              1       2       3       4       5       6       7       8  
+
+    Fichas (0 al final): 2 3 4 0
+Jugada: verd 2  verd 3  verd 4    - Escalera correcta!
+
+Tablero:
+ 1: azul 4  azul 5  azul 6  
+ 2: rojo 5  verd 5  azul 5  
+ 3: verd 2  verd 3  verd 4  
+
+
+Soporte: rojo 1  amar 1  amar 2  amar 6  amar 8  
+
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Turno para el jugador 2 ...
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 7  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 7  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 7  amar 5  
+
+Turno para el jugador 1 ...
+Soporte: rojo 1  amar 1  amar 2  amar 6  amar 8  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+Soporte: rojo 1  amar 1  amar 2  amar 6  amar 8  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Soporte: rojo 1  amar 1  amar 2  amar 6  amar 8  amar 3  
+
+Turno para el jugador 2 ...
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 7  amar 5  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 5  amar 7  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 5  amar 7  amar 5  
+
+Turno para el jugador 1 ...
+Soporte: rojo 1  amar 1  amar 2  amar 6  amar 8  amar 3  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+amar 1  amar 2  amar 3  
+Soporte: rojo 1  amar 1  amar 2  amar 3  amar 6  amar 8  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  4
+Soporte: rojo 1  amar 1  amar 2  amar 3  amar 6  amar 8  
+              1       2       3       4       5       6  
+
+    Fichas (0 al final): 2 3 4 0
+Jugada: amar 1  amar 2  amar 3    - Escalera correcta!
+
+Tablero:
+ 1: azul 4  azul 5  azul 6  
+ 2: rojo 5  verd 5  azul 5  
+ 3: verd 2  verd 3  verd 4  
+ 4: amar 1  amar 2  amar 3  
+
+
+Soporte: rojo 1  amar 6  amar 8  
+
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Turno para el jugador 2 ...
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 5  amar 7  amar 5  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 5  amar 5  amar 7  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  0
+Soporte: rojo 2  rojo 2  rojo 3  rojo 6  verd 6  azul 7  azul 7  azul 8  amar 5  amar 5  amar 7  verd 6  
+
+Turno para el jugador 1 ...
+Soporte: rojo 1  amar 6  amar 8  
+
+1: Ordenar por num., 2: Ordenar por color, 3: Sugerir, 4: Poner, 0: Fin >>>  3
+Soporte: rojo 1  amar 6  amar 8  
+

@@ -8,6 +8,6 @@
 
 using namespace std;
 
-tAjustes incializarAjustes(int numFichas, int iniFichas, int numJugadores) {
+tAjustes inicializarAjustes(int numFichas, int iniFichas, int numJugadores) {
 	return { numFichas, iniFichas, numJugadores };
 }

@@ -1,10 +1,6 @@
-#include "colores.h"
-#include "fichas.h"
+//FP2 - RummyKub V.2
+//Nombre y Apellidos: Beatriz Bueno Almagro 1ºB
 #include "bolsa.h"
-
-#include <iostream>
-#include <iomanip>
-#include <string>
 
 using namespace std;
 
@@ -32,14 +28,19 @@ void mostrar(const tBolsa& bolsa, tAjustes ajustes) {
 			}
 		}
 	}
+	colorTexto(LIBRE);
 	cout << "\n";
 }
 
-tFicha sacarFicha(tBolsa& bolsa, tFicha ficha, int faux, const tAjustes& ajustes) {
+tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 	//faux nos indica la fila de la bolsa en la que está la ficha
 
 	bool encontrado = false;
 	int cf = 0, c, f; //cf es un contador de las fichas recorridas, para no pasarnos ed 8
+	int faux = numAleatorioFila();
+	tFicha ficha;
+	inicializarColor(ficha, faux);
+	ficha.num = numAleatorioColumna(ajustes) + 1;
 
 	if (ficha.num >= ajustes.numFichas) { // Ajuste de fila/columna inicial, si la columna es la ultima
 		c = 0; // Se pasa al inicio de la siguiente fila 
@@ -90,4 +91,16 @@ bool fichaVacia(const tBolsa& bolsa, const tFicha& ficha, int f) { //funcion par
 		return true;
 	else
 		return false;
+}
+
+int numAleatorioFila() {
+	int numero;
+	numero = rand() % NUM_COLORES * 2;
+	return numero;
+}
+
+int numAleatorioColumna(tAjustes ajustes) {
+	int numero;
+	numero = rand() % ajustes.numFichas;
+	return numero;
 }

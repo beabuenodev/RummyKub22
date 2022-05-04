@@ -11,6 +11,7 @@
 #include <string>
 #include <iomanip>
 
+#include "ajustes.h"
 #include "colores.h"
 #include "fichas.h"
 #include "bolsa.h"
@@ -22,41 +23,29 @@
 // Introduce más librerías si son necesarias
 using namespace std;
 
-struct tAjustes { //Guarda ajustes básicos
-	int numFichas;
-	int iniFichas;
-	int numJugadores;
-};
 
 //llamadas funciones
 void resuelveCaso();
-
-//Funciones Parte 1
-//Funciones Parte 2
 int menu(); //Imprime el menu y devuelve la opción elegida
-
-//Funciones Parte 3
-
-//Funciones Parte 4
-// el booleano iniciojugada indica si la ficha se debe colocar en el inicio de la jugada (en el caso de una escalera) 
+tAjustes ajustesIniciales();
 
 int main() {
 	// ajustes para que cin extraiga directamente de un fichero
-#ifndef DOMJUDGE
+/*#ifndef DOMJUDGE
 	std::ifstream in("datos.in");
 	auto cinbuf = std::cin.rdbuf(in.rdbuf());
 	std::ofstream out("datos.out");
 	auto coutbuf = std::cout.rdbuf(out.rdbuf());
-#endif
+#endif*/
 
 	resuelveCaso();
 
 	// para dejar todo como estaba al principio
-#ifndef DOMJUDGE
+/*#ifndef DOMJUDGE
 	std::cin.rdbuf(cinbuf);
 	std::cout.rdbuf(coutbuf);
 	system("PAUSE");
-#endif
+#endif*/
 
 	return 0;
 }
@@ -67,11 +56,9 @@ int main() {
 void resuelveCaso() {
 
 	//guardamos los ajustes iniciales
-	tAjustes ajustes;
-
-	cin >> ajustes.numFichas;
-	cin >> ajustes.iniFichas;
-	cin >> ajustes.numJugadores;
+	
+	srand(time(NULL));
+	tAjustes ajustes = ajustesIniciales();
 
 	//inicializamos la bolsa
 	cout << "\n";
@@ -95,7 +82,7 @@ void resuelveCaso() {
 	bool jugada = false, ganado = false;
 	tTablero tablero;
 	tablero.contador = 0;
-	cin >> turno;
+	turno = 1+rand() % (ajustes.numJugadores - 1);
 	cout << "Turno para el jugador " << turno << " ...\n";
 	mostrar(soportes[turno - 1]);
 	cout << "\n";
@@ -129,9 +116,7 @@ void resuelveCaso() {
 			break;
 		case 0: //Finaliza turno
 			if (!jugada) { // Si no ha jugado este turno se roba una ficha
-				cin >> faux;
-				cin >> num;
-				robar(bolsa, soportes[turno - 1], faux, num, ajustes);
+				robar(bolsa, soportes[turno - 1], ajustes);
 				mostrar(soportes[turno - 1]);
 				cout << "\n";
 			}
@@ -150,16 +135,26 @@ void resuelveCaso() {
 	}
 }
 
+tAjustes ajustesIniciales() {
+	int numFichas, iniFichas, numJugadores;
+	cout << "Introducir ajustes inciales... \nNúmero de Fichas:";
+	cin >> numFichas;
+	cout << "\nFichas iniciales: ";
+	cin >> iniFichas;
+	cout << "\nNúmero de Jugadores: ";
+	cin >> numJugadores;
+
+	return inicializarAjustes(numFichas, iniFichas, numJugadores);
+}
+
 int menu() {
+	cout << "1: Ordenar por num., ";
+	cout << "2: Ordenar por color, ";
+	cout << "3: Sugerir, ";
+	cout << "4: Poner, ";
+	cout << "0: Fin >>>  ";
 	int opcion;
 	cin >> opcion;
-	if (opcion != -1) { // Como en la opción -1 no se imprime el menú, esta es la unica forma de que pase los tests de domjudge
-		cout << "1: Ordenar por num., ";
-		cout << "2: Ordenar por color, ";
-		cout << "3: Sugerir, ";
-		cout << "4: Poner, ";
-		cout << "0: Fin >>>  ";
-		cout << opcion << "\n";
-	}
+	cout << opcion << "\n";
 	return opcion;
 }

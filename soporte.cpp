@@ -3,19 +3,18 @@
 #include <string>
 #include <iomanip>
 
-#include "colores.h"
-#include "fichas.h"
-#include "bolsa.h"
 #include "soporte.h"
+#include "jugadas.h"
 
 using namespace std;
 
 void mostrar(const tSoporte& soporte) {
 
-	cout << "Soporte: ";
+	cout << "Soporte:      ";
 	for (int f = 0; f < soporte.contador; f++) {
-		cout << fichaToString(soporte.fichas[f]) << "  ";
+		cout << fichaToString(soporte.fichas[f]) << "       ";
 	}
+	colorTexto(LIBRE);
 	cout << "\n";
 }
 
@@ -77,13 +76,8 @@ void ordenarPorColor(tSoporte& soporte) {
 	}
 }
 
-void robar(tBolsa& bolsa, tSoporte& soporte, int faux, int num, const tAjustes& ajustes) {
-	tFicha aux;
-
-	aux.num = num + 1;
-	inicializarColor(aux, faux); //Se inicializa la ficha que se pide robar
-
-	soporte.fichas[soporte.contador] = sacarFicha(bolsa, aux, faux, ajustes); //Se saca la ficha de la bolsa
+void robar(tBolsa& bolsa, tSoporte& soporte, const tAjustes& ajustes) {
+	soporte.fichas[soporte.contador] = sacarFicha(bolsa, ajustes); //Se saca la ficha de la bolsa
 	soporte.contador++;
 }
 
@@ -192,5 +186,4 @@ void eliminarFicha(tSoporte& soporte, tFicha ficha) {
 		}
 	}
 	soporte = aux;
-}
-
+} 

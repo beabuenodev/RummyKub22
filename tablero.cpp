@@ -1,3 +1,8 @@
+#include "tablero.h"
+#include "jugadas.h"
+
+using namespace std;
+
 bool jugar(tTablero& tablero, tSoporte& soporte) {
 
 	mostrar(soporte);
@@ -127,4 +132,5 @@ void mostrar(const tTablero& tablero) {
 		c = 0;
 		cout << "\n";
 	}
+	colorTexto(LIBRE);
 }

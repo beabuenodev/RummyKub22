@@ -1,14 +1,5 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <iomanip>
-
-#include "colores.h"
-#include "fichas.h"
-#include "bolsa.h"
-#include "soporte.h"
-#include "soportes.h"
 #include "jugadas.h"
+#include "soporte.h"
 
 using namespace std;
 
@@ -55,13 +46,11 @@ void nuevaJugada(tSoporte& soporte, tJugada& jugada, int& jcont) {
 	cout << "    Fichas (0 al final): "; //Se recogen e imprimen las posiciones elegidas
 	cin >> aux;
 	while (aux != 0) {
-		cout << aux << " ";
 		jugada[jcont] = soporte.fichas[aux - 1];
 		jugada[jcont + 1] = { LIBRE, -1 };
 		jcont++;
 		cin >> aux;
 	}
-	cout << "0\n";
 
 	cout << "Jugada: "; // Se imprimen las fichas elegidas
 	jcont = 0;
@@ -71,6 +60,7 @@ void nuevaJugada(tSoporte& soporte, tJugada& jugada, int& jcont) {
 		jcont++;
 		faux = jugada[jcont];
 	}
+	colorTexto(LIBRE);
 }
 
 bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {

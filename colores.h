@@ -1,6 +1,6 @@
-#pragma once
+#ifndef colores_h
+#define colores_h
 
-#include "fichas.h"
 #include <iostream>
 #include <string>
 
@@ -12,5 +12,6 @@ enum tColor { ROJO, VERD, AZUL, AMAR, LIBRE };
 const int NUM_COLORES = 4;
 
 //cabeceras
+void colorTexto(tColor color);
 
-void inicializarColor(tFicha& ficha, int f); // Inicializa un color para la ficha dependiendo del número de la fila de la Bolsa
+#endif

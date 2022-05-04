@@ -1,27 +1,26 @@
+//FP2 - RummyKub V.2
+//Nombre y Apellidos: Beatriz Bueno Almagro 1ºB
 
 #include "colores.h"
-#include <iostream>
-#include <string>
 
 using namespace std;
 
-void inicializarColor(tFicha& ficha, int f) {
-	switch (f) { //inicializamos el color según el numero de fila
-	case 0:
-	case 4:
-		ficha.color = ROJO;
+void colorTexto(tColor color) {
+	switch (color) {
+	case AMAR:
+		cout << "\033[1;40;33m";
 		break;
-	case 1:
-	case 5:
-		ficha.color = VERD;
+	case AZUL:
+		cout << "\033[40;34m";
 		break;
-	case 2:
-	case 6:
-		ficha.color = AZUL;
+	case ROJO:
+		cout << "\033[40;31m";
 		break;
-	case 3:
-	case 7:
-		ficha.color = AMAR;
+	case VERD:
+		cout << "\033[40;32m";
+		break;
+	case LIBRE:
+		cout << "\033[40;37m";
 		break;
 	}
 }

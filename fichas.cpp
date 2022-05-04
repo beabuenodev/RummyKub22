@@ -1,35 +1,36 @@
-#include "colores.h"
 #include "fichas.h"
-
-#include <iostream>
-#include <string>
-#include <iomanip>
 
 using namespace std;
 
-string fichaToString(tFicha ficha) {
-
-	string aux;
-
-	switch (ficha.color) { // Construye un string para mostrar la ficha
-	case ROJO: //Primero con el color
-		aux = "rojo ";
+void inicializarColor(tFicha& ficha, int f) {
+	switch (f) { //inicializamos el color según el numero de fila
+	case 0:
+	case 4:
+		ficha.color = ROJO;
 		break;
-	case VERD:
-		aux = "verd ";
+	case 1:
+	case 5:
+		ficha.color = VERD;
 		break;
-	case AZUL:
-		aux = "azul ";
+	case 2:
+	case 6:
+		ficha.color = AZUL;
 		break;
-	case AMAR:
-		aux = "amar ";
-		break;
-	case LIBRE:
-		aux = "    ";
+	case 3:
+	case 7:
+		ficha.color = AMAR;
 		break;
 	}
+}
 
-	aux += to_string(ficha.num); //Y se le añade el número
+int fichaToString(tFicha ficha) {
+
+	int aux;
+	colorTexto(ficha.color);
+	if (ficha.num != -1)
+		aux = ficha.num;
+	else
+		aux = 0;
 
 	return aux;
 }
