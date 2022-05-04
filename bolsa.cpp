@@ -5,12 +5,12 @@
 using namespace std;
 
 void inicializarBolsa(tBolsa& bolsa, tAjustes ajustes) {
-	tFicha aux;
+	tFichaPtr aux;
 
 	for (int f = 0; f < 8; f++) {
 		for (int c = 0; c < ajustes.numFichas; c++) { //inicializamos fichas para cada posición de la bolsa
-			aux.num = c + 1;
-			inicializarColor(aux, f);
+			aux->num = c + 1;
+			inicializarColor(*aux, f);
 			bolsa[f][c] = aux;
 		}
 	}
@@ -21,10 +21,10 @@ void mostrar(const tBolsa& bolsa, tAjustes ajustes) {
 	for (int f = 0; f < 8; f++) {
 		for (int c = 0; c < ajustes.numFichas; c++) {
 			if (c == ajustes.numFichas - 1) {
-				cout << fichaToString(bolsa[f][c]) << "\n";
+				cout << fichaToString(*bolsa[f][c]) << "\n";
 			}
 			else {
-				cout << fichaToString(bolsa[f][c]) << "  ";
+				cout << fichaToString(*bolsa[f][c]) << "  ";
 			}
 		}
 	}
@@ -58,9 +58,9 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 
 	if (fichaVacia(bolsa, ficha, faux)) { //Si la posicion en bolsa está vacia
 		while (!encontrado && c < ajustes.numFichas && cf < NUM_COLORES * 2) { //Recorremos toda la bolsa hasta encontrar una ficha que no está vacía
-			if (!fichaVacia(bolsa, bolsa[f][c], f)) { //Si la ficha en la que estamos no está vacía, la sacamos
-				aux = bolsa[f][c];
-				bolsa[f][c] = { LIBRE, -1 };
+			if (!fichaVacia(bolsa, *bolsa[f][c], f)) { //Si la ficha en la que estamos no está vacía, la sacamos
+				aux = *bolsa[f][c];
+				delete bolsa[f][c];
 				encontrado = true;
 			}
 			if (c == ajustes.numFichas - 1) { // Ajustes de índices si se acaban las columnas
@@ -78,7 +78,7 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 	}
 	else { //Si la pos no está vacía, simplemente se coge esa ficha
 		aux = ficha;
-		bolsa[faux][ficha.num - 1] = { LIBRE, -1 };
+		delete bolsa[faux][ficha.num - 1];
 	}
 
 	return aux;

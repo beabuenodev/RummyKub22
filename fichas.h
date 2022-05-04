@@ -16,6 +16,8 @@ struct tFicha {
 	int num;
 };
 
+typedef tFicha* tFichaPtr;
+
 //Funciones
 void inicializarColor(tFicha& ficha, int f); // Inicializa un color para la ficha dependiendo del número de la fila de la Bolsa
 int fichaToString(tFicha ficha); // Devuelve el color y el numero de una ficha

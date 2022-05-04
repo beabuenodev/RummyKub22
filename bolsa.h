@@ -14,7 +14,7 @@
 using namespace std;
 
 //constantes y tipos
-typedef tFicha tBolsa[8][13];
+typedef tFichaPtr tBolsa[8][13];
 
 //funciones
 void inicializarBolsa(tBolsa& bolsa, tAjustes ajustes); // Inicializa la bolsa con las fichas iniciales
