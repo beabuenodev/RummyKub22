@@ -8,6 +8,10 @@
 
 using namespace std;
 
+void inicializarSoporte(tSoporte soporte) {
+	soporte.fichas = new tFichaPtr[8]();
+}
+
 void mostrar(const tSoporte& soporte) {
 
 	cout << "Soporte:      ";

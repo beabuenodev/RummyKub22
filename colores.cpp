@@ -24,3 +24,27 @@ void colorTexto(tColor color) {
 		break;
 	}
 }
+
+tColor inicializarColor(int f) {
+	tColor color;
+	switch (f) { //inicializamos el color según el numero de fila
+	case 0:
+	case 4:
+		color = ROJO;
+		break;
+	case 1:
+	case 5:
+		color = VERD;
+		break;
+	case 2:
+	case 6:
+		color = AZUL;
+		break;
+	case 3:
+	case 7:
+		color = AMAR;
+		break;
+	}
+
+	return color;
+}

@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ajustes.cpp" />
     <ClCompile Include="bolsa.cpp" />
     <ClCompile Include="colores.cpp" />
     <ClCompile Include="fichas.cpp" />
@@ -153,6 +154,7 @@
     <None Include="datos.out" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ajustes.h" />
     <ClInclude Include="bolsa.h" />
     <ClInclude Include="colores.h" />
     <ClInclude Include="fichas.h" />

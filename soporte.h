@@ -13,7 +13,8 @@ using namespace std;
 
 //Constantes y tipos
 struct tSoporte {
-	tFicha fichas[41];
+	tFichaPtr fichas;
+	int capacidad;
 	int contador;
 };
 

@@ -5,13 +5,9 @@
 using namespace std;
 
 void inicializarBolsa(tBolsa& bolsa, tAjustes ajustes) {
-	tFichaPtr aux;
-
 	for (int f = 0; f < 8; f++) {
 		for (int c = 0; c < ajustes.numFichas; c++) { //inicializamos fichas para cada posición de la bolsa
-			aux->num = c + 1;
-			inicializarColor(*aux, f);
-			bolsa[f][c] = aux;
+			bolsa[f][c] = new tFicha{ inicializarColor(f), c + 1 };
 		}
 	}
 }
@@ -39,7 +35,7 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 	int cf = 0, c, f; //cf es un contador de las fichas recorridas, para no pasarnos ed 8
 	int faux = numAleatorioFila();
 	tFicha ficha;
-	inicializarColor(ficha, faux);
+	ficha.color = inicializarColor(faux);
 	ficha.num = numAleatorioColumna(ajustes) + 1;
 
 	if (ficha.num >= ajustes.numFichas) { // Ajuste de fila/columna inicial, si la columna es la ultima
@@ -85,9 +81,7 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 }
 
 bool fichaVacia(const tBolsa& bolsa, const tFicha& ficha, int f) { //funcion para ver si una ficha está vacía en la bolsa
-	tFicha fichavacia = { LIBRE, -1 };
-
-	if (bolsa[f][ficha.num - 1] == fichavacia || ficha.num == -1)
+	if (bolsa[f][ficha.num - 1] == NULL || ficha.num == -1)
 		return true;
 	else
 		return false;
@@ -103,4 +97,13 @@ int numAleatorioColumna(tAjustes ajustes) {
 	int numero;
 	numero = rand() % ajustes.numFichas;
 	return numero;
+}
+
+void delBolsa(tBolsa bolsa, tAjustes ajustes) {
+	for (int f = 0; f < NUM_COLORES; f++) {
+		for (int c = 0; c < ajustes.numFichas; c++) {
+			if (bolsa[f][c] != NULL)
+				delete bolsa[f][c];
+		}
+	}
 }

@@ -3,13 +3,15 @@
 // email: beabueno@ucm.es	
 // Compilador y S.O. utilizado: Visual Studio 2019, Windows 10
 // Nombre del problema: Práctica Rummikub EJC 1
-// Comentario general sobre la solución 
-// explicando como se resuelve el problema
+
+#define _CRTDBG_MAP_ALLOC
 
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <iomanip>
+#include <crtdbg.h>
+#include <cstdlib>
 
 #include "ajustes.h"
 #include "colores.h"
@@ -39,6 +41,7 @@ int main() {
 #endif*/
 
 	resuelveCaso();
+	_CrtDumpMemoryLeaks();
 
 	// para dejar todo como estaba al principio
 /*#ifndef DOMJUDGE

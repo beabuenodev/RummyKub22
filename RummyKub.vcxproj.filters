@@ -39,6 +39,9 @@
     <ClCompile Include="tablero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ajustes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="datos.in">
@@ -68,6 +71,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tablero.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ajustes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

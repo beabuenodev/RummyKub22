@@ -23,4 +23,5 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes); // Saca una ficha con
 bool fichaVacia(const tBolsa& bolsa, const tFicha& ficha, int f); // Indica si una ficha en la bolsa está vacía.
 int numAleatorioFila();
 int numAleatorioColumna(tAjustes ajustes);
+void delBolsa(tBolsa bolsa, tAjustes ajustes);
 #endif
