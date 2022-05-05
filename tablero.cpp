@@ -44,6 +44,7 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 		tJugada jaux;
 		inicializarJugada(jaux, ajustes);
 		int c = 0, d = 0, cjug = 0, posjug = -1, posfich = 0;
+
 		bool iniciojugada = false;
 
 		for (int j = 0; j < tablero.contador; j++) { //Se recogen todas las jugadas a las que se le puede meter una ficha 
@@ -76,15 +77,25 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 			}
 			else if (cjug == 1 && iniciojugada) { //Si es solo una jugada, y es a su inicio (caso de escaleras) se coloca la ficha
 				cout << "Jugadas del tablero donde poner la ficha: " << posjug + 1;
+				tJugada jaux2;
 				c = 1;
-				aux = jugada[1];
-				jaux[0] = ficha;
+				aux = jaux[0];
+				jaux2[0] = ficha;
 				while (!fichaVacia(aux)) {
-					jaux[c] = aux;
-					c++;
-					aux = jugada[c];
+					jaux2[c] = aux;
+					c++; 
+					aux = jaux[c - 1];
 				}
-				jaux[c + 1] = { LIBRE, -1 }; //Se coloca el centinela
+				jaux2[c] = { LIBRE, -1 }; //Se coloca el centinela
+
+				aux = jaux2[0];
+				c = 0;
+				while (!fichaVacia(aux)) {
+					tablero.jugadas[posjug][c] = aux;
+					c++;
+					aux = jaux2[c];
+				}
+				tablero.jugadas[posjug][c] = { LIBRE, -1 };
 				eliminarFicha(soporte, ficha);
 				cout << "   -> Colocada!\n";
 				return true;

@@ -17,4 +17,5 @@ typedef tSoporte tSoportes[4];
 //funciones
 void siguienteTurno(int& turno, tSoportes soportes, tAjustes ajustes); //Cambia el número del turno al siguiente jugador
 void repartir(tBolsa& bolsa, tSoportes& soportes, const tAjustes& ajustes); //Reparte según el archivo datos.in
+void delSoportes(tSoportes& soportes, tAjustes ajustes);
 #endif

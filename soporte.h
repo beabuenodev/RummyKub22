@@ -19,7 +19,7 @@ struct tSoporte {
 };
 
 //Funciones
-void inicializarSoporte(tSoporte soporte); // Inicializa el soporte vacio, con capacidad ocho y contador 0
+void inicializarSoporte(tSoporte& soporte); // Inicializa el soporte vacio, con capacidad ocho y contador 0
 
 void nuevaFicha(tSoporte& soporte, tFicha ficha); // Añade una ficha al soporte
 void eliminarFicha(tSoporte& soporte, tFicha ficha); // Elimina una ficha del soporte

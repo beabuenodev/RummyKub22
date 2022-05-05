@@ -18,6 +18,7 @@ struct tTablero {
 };
 
 //Funciones
-bool jugar(tTablero& tablero, tSoporte& soporte); // Recoge, comprueba y coloca las jugadas en el tablero
+bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes); // Recoge, comprueba y coloca las jugadas en el tablero
 void mostrar(const tTablero& tablero); // Muestra todas las jugadas del tablero
+void delJugadas(tTablero tablero);
 #endif

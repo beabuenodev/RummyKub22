@@ -1,13 +1,12 @@
 ﻿c:\software\programacion\MSVStudio2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (RummyKub V.2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  bolsa.cpp
+  jugadas.cpp
   RummyKub.cpp
 C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\RummyKub.cpp(63,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\RummyKub.cpp(84,21): warning C4101: 'faux': unreferenced local variable
 C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\RummyKub.cpp(84,27): warning C4101: 'num': unreferenced local variable
-  bolsa.cpp
-  jugadas.cpp
   soporte.cpp
-  soportes.cpp
   tablero.cpp
 C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\tablero.cpp(140,30): warning C4154: deletion of an array expression; conversion to pointer supplied
   Generating Code...
-C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\soporte.cpp : fatal error C1090: PDB API call failed, error code '3': C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\x64\Debug\vc142.pdb
+C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\tablero.cpp : fatal error C1090: PDB API call failed, error code '3': C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\x64\Debug\vc142.pdb

@@ -59,7 +59,6 @@ int main() {
 void resuelveCaso() {
 
 	//guardamos los ajustes iniciales
-	
 	srand(time(NULL));
 	tAjustes ajustes = ajustesIniciales();
 
@@ -72,7 +71,7 @@ void resuelveCaso() {
 	//repartimos fichas
 	tSoportes soportes;
 	for (int s = 0; s < ajustes.numJugadores; s++) {
-		soportes[s].contador = 0;
+		inicializarSoporte(soportes[s]);
 	}
 
 	repartir(bolsa, soportes, ajustes);
@@ -81,7 +80,7 @@ void resuelveCaso() {
 	mostrar(bolsa, ajustes);
 
 	//empezamos a jugar
-	int turno, opcion, faux, num;
+	int turno, opcion;
 	bool jugada = false, ganado = false;
 	tTablero tablero;
 	tablero.contador = 0;
@@ -106,7 +105,7 @@ void resuelveCaso() {
 			mostrar(soportes[turno - 1]);
 			break;
 		case 4: //Se intenta crear una jugada nueva o añadir una ficha a una jugada existente
-			if (jugar(tablero, soportes[turno - 1])) 
+			if (jugar(tablero, soportes[turno - 1], ajustes)) 
 				jugada = true;
 			cout << "\n";
 			mostrar(tablero);
@@ -136,6 +135,9 @@ void resuelveCaso() {
 	if (ganado) {
 		cout << "El jugador " << turno << " ha ganado!\n"; //Mensaje de que un jugador ha ganado
 	}
+	delBolsa(bolsa, ajustes);
+	delSoportes(soportes, ajustes);
+	delJugadas(tablero);
 }
 
 tAjustes ajustesIniciales() {

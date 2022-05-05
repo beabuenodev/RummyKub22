@@ -4,7 +4,10 @@
 using namespace std;
 
 void inicializarJugada(tJugada jugada, tAjustes ajustes) {
-	jugada = new tFicha[ajustes.numFichas + 1]{LIBRE, -1};
+	for (int f = 0; f < ajustes.numFichas; f++) {
+		jugada[f].color = LIBRE;
+		jugada[f].num = -1;
+	}
 }
 
 bool esEscalera(const tJugada& jugada) {
@@ -70,12 +73,13 @@ void nuevaJugada(tSoporte& soporte, tJugada& jugada, int& jcont) {
 bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {
 	tFicha aux = jugada[0];
 	tJugada jaux, jaux1;
-	int c = 0;
+	int c = 0, caux = 0;
 	while (!fichaVacia(aux)) {
 		jaux[c] = aux;
 		c++;
 		aux = jugada[c];
 	}
+	c++;
 	jaux[c - 1] = ficha;
 	jaux[c] = { LIBRE, -1 };
 	//Se añade a la jugada una ficha auxiliar y vemos si se mantiene la escalera o la serie
@@ -87,14 +91,14 @@ bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {
 		return true;
 	else {
 		c = 1;
-		aux = jugada[1];
+		aux = jugada[0];
 		jaux1[0] = ficha;
 		while (!fichaVacia(aux)) {
 			jaux1[c] = aux;
 			c++;
-			aux = jugada[c];
+			aux = jugada[c - 1];
 		}
-		jaux[c] = { LIBRE, -1 };
+		jaux1[c] = { LIBRE, -1 };
 		bool escalera2 = esEscalera(jaux1); //En el caso de escaleras probamos si se puede poner la ficha al inicio
 		if (escalera2) {
 			iniciojugada = true;

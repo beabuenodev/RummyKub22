@@ -8,14 +8,14 @@
 
 using namespace std;
 
-void inicializarSoporte(tSoporte soporte) {
+void inicializarSoporte(tSoporte& soporte) {
 	soporte.fichas = new tFicha[8];
 	soporte.capacidad = 8;
 	soporte.contador = 0;
 }
 
 void nuevaFicha(tSoporte& soporte, tFicha ficha) {
-	if (soporte.contador == soporte.capacidad)
+	if (soporte.contador + 1 == soporte.capacidad)
 		ampliarCapacidad(soporte);
 	soporte.fichas[soporte.contador] = ficha;
 	soporte.contador++;
@@ -55,6 +55,7 @@ void disminuirCapacidad(tSoporte& soporte) {
 		aux[i] = soporte.fichas[i];
 	delete[] soporte.fichas;
 	soporte.capacidad = soporte.capacidad - 4;
+	soporte.fichas = aux;
 	aux = nullptr;
 }
 

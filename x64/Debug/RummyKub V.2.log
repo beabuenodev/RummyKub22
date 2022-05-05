@@ -1,9 +1,2 @@
-﻿  bolsa.cpp
-C:\Users\usuario_local\Documents\RummyKub\bolsa.cpp(90,5): error C2679: binary '==': no operator found which takes a right-hand operand of type 'tFicha' (or there is no acceptable conversion)
-C:\Users\usuario_local\Documents\RummyKub\fichas.h(24,6): message : could be 'bool operator ==(const tFicha &,const tFicha &)'
-C:\Users\usuario_local\Documents\RummyKub\bolsa.cpp(90,5): message : or       'built-in C++ operator==(tFichaPtr, tFichaPtr)'
-C:\Users\usuario_local\Documents\RummyKub\bolsa.cpp(90,5): message : while trying to match the argument list '(const tFichaPtr, tFicha)'
-  fichas.cpp
-  tablero.cpp
-  Generating Code...
-C:\Users\usuario_local\Documents\RummyKub\fichas.cpp : fatal error C1090: PDB API call failed, error code '3': C:\Users\usuario_local\Documents\RummyKub\x64\Debug\vc142.pdb
+﻿C:\software\programacion\MSVStudio2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (RummyKub.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  RummyKub V.2.vcxproj -> C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\x64\Debug\RummyKub V.2.exe

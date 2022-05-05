@@ -16,13 +16,16 @@ void mostrar(const tBolsa& bolsa, tAjustes ajustes) {
 	cout << "Bolsa...\n";
 	for (int f = 0; f < 8; f++) {
 		for (int c = 0; c < ajustes.numFichas; c++) {
-			if (c == ajustes.numFichas - 1) {
-				cout << fichaToString(*bolsa[f][c]) << "\n";
-			}
-			else {
-				cout << fichaToString(*bolsa[f][c]) << "  ";
+			if (bolsa[f][c] != NULL) {
+				if (c == ajustes.numFichas - 1) {
+					cout << fichaToString(*bolsa[f][c]);
+				}
+				else {
+					cout << fichaToString(*bolsa[f][c]) << "  ";
+				}
 			}
 		}
+		cout << "\n";
 	}
 	colorTexto(LIBRE);
 	cout << "\n";
@@ -52,11 +55,12 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 
 	tFicha aux;
 
-	if (fichaVacia(bolsa, ficha, faux)) { //Si la posicion en bolsa está vacia
+	if (bolsa[faux][ficha.num] == NULL) { //Si la posicion en bolsa está vacia
 		while (!encontrado && c < ajustes.numFichas && cf < NUM_COLORES * 2) { //Recorremos toda la bolsa hasta encontrar una ficha que no está vacía
-			if (!fichaVacia(bolsa, *bolsa[f][c], f)) { //Si la ficha en la que estamos no está vacía, la sacamos
+			if (bolsa[f][c] != NULL) { //Si la ficha en la que estamos no está vacía, la sacamos
 				aux = *bolsa[f][c];
 				delete bolsa[f][c];
+				bolsa[f][c] = NULL;
 				encontrado = true;
 			}
 			if (c == ajustes.numFichas - 1) { // Ajustes de índices si se acaban las columnas
@@ -75,16 +79,10 @@ tFicha sacarFicha(tBolsa& bolsa, const tAjustes& ajustes) {
 	else { //Si la pos no está vacía, simplemente se coge esa ficha
 		aux = ficha;
 		delete bolsa[faux][ficha.num - 1];
+		bolsa[faux][ficha.num - 1] = NULL;
 	}
 
 	return aux;
-}
-
-bool fichaVacia(const tBolsa& bolsa, const tFicha& ficha, int f) { //funcion para ver si una ficha está vacía en la bolsa
-	if (bolsa[f][ficha.num - 1] == NULL || ficha.num == -1)
-		return true;
-	else
-		return false;
 }
 
 int numAleatorioFila() {
