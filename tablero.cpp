@@ -3,8 +3,7 @@
 
 using namespace std;
 
-bool jugar(tTablero& tablero, tSoporte& soporte) {
-
+bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 	mostrar(soporte);
 	char espacio = ' '; //Se imprime el soporte con los numeros de las posiciones
 	int numespaciosiniciales = 9, numespacioscolor = 6;
@@ -15,6 +14,7 @@ bool jugar(tTablero& tablero, tSoporte& soporte) {
 	cout << "\n";
 
 	tJugada jugada;
+	inicializarJugada(jugada, ajustes);
 	int jcont = 0;
 
 	cout << "\n";
@@ -42,6 +42,7 @@ bool jugar(tTablero& tablero, tSoporte& soporte) {
 		cout << "\n";
 		tFicha ficha = jugada[0], aux;
 		tJugada jaux;
+		inicializarJugada(jaux, ajustes);
 		int c = 0, d = 0, cjug = 0, posjug = -1, posfich = 0;
 		bool iniciojugada = false;
 
@@ -59,7 +60,6 @@ bool jugar(tTablero& tablero, tSoporte& soporte) {
 			}
 			c = 0; d = 0;
 		}
-
 		if (posjug != -1) { //Si se ha encontrado al menos una jugada en la que se puede colocar la ficha
 			if (cjug == 1 && !iniciojugada) { //Si es solo una jugada y no es a su inicio (caso de escaleras) se coloca la ficha 
 				cout << "Jugadas del tablero donde poner la ficha: " << posjug + 1;
@@ -133,4 +133,9 @@ void mostrar(const tTablero& tablero) {
 		cout << "\n";
 	}
 	colorTexto(LIBRE);
+}
+
+void delJugadas(tTablero tablero) {
+	for (int j = 0; j < tablero.contador; j++)
+		delete[] tablero.jugadas[j];
 }

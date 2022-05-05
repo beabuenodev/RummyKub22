@@ -19,18 +19,21 @@ struct tSoporte {
 };
 
 //Funciones
-void inicializarSoporte(tSoporte soporte);
+void inicializarSoporte(tSoporte soporte); // Inicializa el soporte vacio, con capacidad ocho y contador 0
 
 void nuevaFicha(tSoporte& soporte, tFicha ficha); // Añade una ficha al soporte
 void eliminarFicha(tSoporte& soporte, tFicha ficha); // Elimina una ficha del soporte
 
 void ampliarCapacidad(tSoporte& soporte); // Amplia la capacidad si el soporte está lleno
-
+void disminuirCapacidad(tSoporte& soporte); // Disminuye la capacidad si el soporte tiene al menos ocho posiciones vacias
 
 void mostrar(const tSoporte& soporte); // Muestra los soportes
+
 void ordenarPorNum(tSoporte& soporte); //Ordena el soporte crecientemente, primero por números y luego por colores
 void ordenarPorColor(tSoporte& soporte); //Ordena el soporte crecientemente, primero por color y luego por números
+
 void robar(tBolsa& bolsa, tSoporte& soporte, const tAjustes& ajustes); //Roba una ficha de la bolsa
+
 void mostrarEscaleras(tSoporte& soporte); // Muestras las escaleras que se pueden formar con el soporte
 void mostrarSeries(tSoporte& soporte); // Muestra las series que se pueden formar con el soporte
 void sugerir(tSoporte& soporte); // Sugiere escaleras y series sobre un soporte

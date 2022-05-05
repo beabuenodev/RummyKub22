@@ -48,6 +48,16 @@ void ampliarCapacidad(tSoporte& soporte) {
 	aux = nullptr;
 }
 
+void disminuirCapacidad(tSoporte& soporte) {
+	tFichaPtr aux = nullptr;
+	aux = new tFicha[soporte.capacidad - 4];
+	for (int i = 0; i < soporte.contador; i++)
+		aux[i] = soporte.fichas[i];
+	delete[] soporte.fichas;
+	soporte.capacidad = soporte.capacidad - 4;
+	aux = nullptr;
+}
+
 void mostrar(const tSoporte& soporte) {
 	cout << "Soporte:      ";
 	for (int f = 0; f < soporte.contador; f++) {
@@ -116,12 +126,10 @@ void ordenarPorColor(tSoporte& soporte) {
 }
 
 void robar(tBolsa& bolsa, tSoporte& soporte, const tAjustes& ajustes) {
-	soporte.fichas[soporte.contador] = sacarFicha(bolsa, ajustes); //Se saca la ficha de la bolsa
-	soporte.contador++;
+	nuevaFicha(soporte, sacarFicha(bolsa, ajustes)); // Se saca la ficha de la bolsa aleatoriamente
 }
 
 void mostrarEscaleras(tSoporte& soporte) {
-
 	tJugada escalera;
 	int pos = 0, posesc = 0;
 	bool siguienteNum = false;
@@ -213,14 +221,4 @@ void mostrarSeries(tSoporte& soporte) {
 void sugerir(tSoporte& soporte) {
 	mostrarSeries(soporte);
 	mostrarEscaleras(soporte);
-}
-
-void disminuirCapacidad(tSoporte& soporte) {
-	tFichaPtr aux = nullptr;
-	aux = new tFicha[soporte.capacidad - 4];
-	for (int i = 0; i < soporte.contador; i++)
-		aux[i] = soporte.fichas[i];
-	delete[] soporte.fichas;
-	soporte.capacidad = soporte.capacidad - 4;
-	aux = nullptr;
 }

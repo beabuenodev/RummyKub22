@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void inicializarJugada(tJugada jugada, tAjustes ajustes) {
+	jugada = new tFicha[ajustes.numFichas + 1]{LIBRE, -1};
+}
+
 bool esEscalera(const tJugada& jugada) {
 	tFicha aux = jugada[0];
 	int contador = 0;
@@ -91,7 +95,7 @@ bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {
 			aux = jugada[c];
 		}
 		jaux[c] = { LIBRE, -1 };
-		bool escalera2 = esEscalera(jaux1); //En el caso de escaleras probamos si se puede pone rla fich aal inicio
+		bool escalera2 = esEscalera(jaux1); //En el caso de escaleras probamos si se puede poner la ficha al inicio
 		if (escalera2) {
 			iniciojugada = true;
 			return true;
