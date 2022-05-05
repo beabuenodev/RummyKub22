@@ -9,11 +9,46 @@
 using namespace std;
 
 void inicializarSoporte(tSoporte soporte) {
-	soporte.fichas = new tFichaPtr[8]();
+	soporte.fichas = new tFicha[8];
+	soporte.capacidad = 8;
+	soporte.contador = 0;
+}
+
+void nuevaFicha(tSoporte& soporte, tFicha ficha) {
+	if (soporte.contador == soporte.capacidad)
+		ampliarCapacidad(soporte);
+	soporte.fichas[soporte.contador] = ficha;
+	soporte.contador++;
+}
+
+void eliminarFicha(tSoporte& soporte, tFicha ficha) {
+	if (soporte.capacidad - soporte.contador - 1 == 8)
+		disminuirCapacidad(soporte);
+	tSoporte aux;
+	aux.contador = 0;
+	aux.capacidad = soporte.capacidad;
+	aux.fichas = new tFicha[aux.capacidad];
+	for (int i = 0; i < soporte.contador; i++) {
+		if (!(soporte.fichas[i] == ficha)) {
+			aux.fichas[aux.contador] = soporte.fichas[i];
+			aux.contador++;
+		}
+	}
+	soporte = aux;
+}
+
+void ampliarCapacidad(tSoporte& soporte) {
+	tFichaPtr aux = nullptr;
+	aux = new tFicha[2 * soporte.capacidad];
+	for (int i = 0; i < soporte.contador; i++)
+		aux[i] = soporte.fichas[i];
+	delete[] soporte.fichas; 
+	soporte.fichas = aux;
+	soporte.capacidad = soporte.capacidad * 2;
+	aux = nullptr;
 }
 
 void mostrar(const tSoporte& soporte) {
-
 	cout << "Soporte:      ";
 	for (int f = 0; f < soporte.contador; f++) {
 		cout << fichaToString(soporte.fichas[f]) << "       ";
@@ -180,14 +215,12 @@ void sugerir(tSoporte& soporte) {
 	mostrarEscaleras(soporte);
 }
 
-void eliminarFicha(tSoporte& soporte, tFicha ficha) {
-	tSoporte aux;
-	aux.contador = 0;
-	for (int i = 0; i < soporte.contador; i++) {
-		if (!(soporte.fichas[i] == ficha)) {
-			aux.fichas[aux.contador] = soporte.fichas[i];
-			aux.contador++;
-		}
-	}
-	soporte = aux;
-} 
+void disminuirCapacidad(tSoporte& soporte) {
+	tFichaPtr aux = nullptr;
+	aux = new tFicha[soporte.capacidad - 4];
+	for (int i = 0; i < soporte.contador; i++)
+		aux[i] = soporte.fichas[i];
+	delete[] soporte.fichas;
+	soporte.capacidad = soporte.capacidad - 4;
+	aux = nullptr;
+}
