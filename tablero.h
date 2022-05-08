@@ -12,8 +12,10 @@
 using namespace std;
 
 //Constantes y tipos
+typedef tJugada tArrayTablero[NUM_FILAS*2];
+
 struct tTablero {
-	tJugada jugadas[40];
+	tArrayTablero jugadas;
 	int contador;
 };
 

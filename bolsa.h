@@ -14,7 +14,8 @@
 using namespace std;
 
 //constantes y tipos
-typedef tFichaPtr tBolsa[8][13];
+const int NUM_FILAS = 8, MAX_COLUMNAS = 13;
+typedef tFichaPtr tBolsa[NUM_FILAS][MAX_COLUMNAS];
 
 //funciones
 void inicializarBolsa(tBolsa& bolsa, tAjustes ajustes); // Inicializa la bolsa con las fichas iniciales

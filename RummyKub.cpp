@@ -101,7 +101,7 @@ void resuelveCaso() {
 			mostrar(soportes[turno - 1]);
 			break;
 		case 3: //Sugerir escaleras o series que se pueden hacer con las fichas del soporte
-			sugerir(soportes[turno - 1]);
+			sugerir(soportes[turno - 1], ajustes);
 			mostrar(soportes[turno - 1]);
 			break;
 		case 4: //Se intenta crear una jugada nueva o añadir una ficha a una jugada existente

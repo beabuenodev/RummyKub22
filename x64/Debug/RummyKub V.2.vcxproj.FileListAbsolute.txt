@@ -1,2 +1,3 @@
 C:\Users\usuario_local\Documents\RummyKub\x64\Debug\RummyKub V.2.exe
 C:\Users\usuario_local\Documents\Rummy2\RummyKub-main.zip\x64\Debug\RummyKub V.2.exe
+C:\Users\FAMILIA BUENO\source\repos\beabuenodev\RummyKub22\x64\Debug\RummyKub V.2.exe

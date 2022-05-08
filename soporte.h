@@ -34,7 +34,7 @@ void ordenarPorColor(tSoporte& soporte); //Ordena el soporte crecientemente, pri
 
 void robar(tBolsa& bolsa, tSoporte& soporte, const tAjustes& ajustes); //Roba una ficha de la bolsa
 
-void mostrarEscaleras(tSoporte& soporte); // Muestras las escaleras que se pueden formar con el soporte
-void mostrarSeries(tSoporte& soporte); // Muestra las series que se pueden formar con el soporte
-void sugerir(tSoporte& soporte); // Sugiere escaleras y series sobre un soporte
+void mostrarEscaleras(tSoporte& soporte, tAjustes ajustes); // Muestras las escaleras que se pueden formar con el soporte
+void mostrarSeries(tSoporte& soporte, tAjustes ajustes); // Muestra las series que se pueden formar con el soporte
+void sugerir(tSoporte& soporte, tAjustes ajustes); // Sugiere escaleras y series sobre un soporte
 #endif

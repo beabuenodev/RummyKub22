@@ -130,8 +130,9 @@ void robar(tBolsa& bolsa, tSoporte& soporte, const tAjustes& ajustes) {
 	nuevaFicha(soporte, sacarFicha(bolsa, ajustes)); // Se saca la ficha de la bolsa aleatoriamente
 }
 
-void mostrarEscaleras(tSoporte& soporte) {
+void mostrarEscaleras(tSoporte& soporte, tAjustes ajustes) {
 	tJugada escalera;
+	inicializarJugada(escalera, ajustes);
 	int pos = 0, posesc = 0;
 	bool siguienteNum = false;
 
@@ -174,9 +175,10 @@ void mostrarEscaleras(tSoporte& soporte) {
 	}
 }
 
-void mostrarSeries(tSoporte& soporte) {
+void mostrarSeries(tSoporte& soporte, tAjustes ajustes) {
 
 	tJugada serie;
+	inicializarJugada(serie, ajustes);
 	int pos = 0, posser = 0;
 	bool siguienteColor = false;
 
@@ -219,7 +221,7 @@ void mostrarSeries(tSoporte& soporte) {
 	}
 }
 
-void sugerir(tSoporte& soporte) {
-	mostrarSeries(soporte);
-	mostrarEscaleras(soporte);
+void sugerir(tSoporte& soporte, tAjustes ajustes) {
+	mostrarSeries(soporte, ajustes);
+	mostrarEscaleras(soporte, ajustes);
 }

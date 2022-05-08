@@ -24,11 +24,12 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 		bool escalera = esEscalera(jugada); //Se recoge si la jugada es una escalera o serie
 		bool serie = esSerie(jugada);
 		if (escalera || serie) {
+			inicializarJugada(tablero.jugadas[tablero.contador], ajustes);
 			for (int f = 0; f < jcont; f++) { //Se añade la jugada al tablero y se elimina del soporte
 				tablero.jugadas[tablero.contador][f] = jugada[f];
 				eliminarFicha(soporte, jugada[f]);
 			}
-			tablero.jugadas[tablero.contador][jcont] = { LIBRE, -1 }; //Se coloca el centinela
+			//tablero.jugadas[tablero.contador][jcont] = new tFicha{ LIBRE, -1 }; //Se coloca el centinela
 			tablero.contador++;
 
 			if (escalera)
@@ -54,8 +55,8 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 				d++; c++;
 				aux = tablero.jugadas[j][d];
 			}
-			jaux[c + 1] = { LIBRE, -1 };
-			if (puedePonerFicha(jaux, ficha, iniciojugada)) {
+			//jaux[c + 1] = { LIBRE, -1 };
+			if (puedePonerFicha(jaux, ficha, ajustes, iniciojugada)) {
 				cjug++;
 				posjug = j;
 			}
@@ -70,7 +71,7 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 					aux = tablero.jugadas[posjug][posfich];
 				}
 				tablero.jugadas[posjug][posfich] = ficha;
-				tablero.jugadas[posjug][posfich + 1] = { LIBRE, -1 }; //Se coloca el centinela
+				//tablero.jugadas[posjug][posfich + 1] = new tFicha { LIBRE, -1 }; //Se coloca el centinela
 				eliminarFicha(soporte, ficha);
 				cout << "   -> Colocada!\n";
 				return true;
@@ -78,6 +79,7 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 			else if (cjug == 1 && iniciojugada) { //Si es solo una jugada, y es a su inicio (caso de escaleras) se coloca la ficha
 				cout << "Jugadas del tablero donde poner la ficha: " << posjug + 1;
 				tJugada jaux2;
+				inicializarJugada(jaux2, ajustes);
 				c = 1;
 				aux = jaux[0];
 				jaux2[0] = ficha;
@@ -95,7 +97,6 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 					c++;
 					aux = jaux2[c];
 				}
-				tablero.jugadas[posjug][c] = { LIBRE, -1 };
 				eliminarFicha(soporte, ficha);
 				cout << "   -> Colocada!\n";
 				return true;
@@ -109,7 +110,6 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 					aux = tablero.jugadas[posjug][posfich];
 				}
 				tablero.jugadas[posjug][posfich] = ficha;
-				tablero.jugadas[posjug][posfich + 1] = { LIBRE, -1 };
 				eliminarFicha(soporte, ficha);
 				cout << "-> Colocada!\n";
 				return true;
@@ -125,6 +125,7 @@ bool jugar(tTablero& tablero, tSoporte& soporte, tAjustes ajustes) {
 		cout << "    - No es una jugada correcta! Prueba de nuevo...\n";
 	}
 
+	
 	return false;
 }
 

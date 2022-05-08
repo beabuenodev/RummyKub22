@@ -12,6 +12,7 @@
 using namespace std;
 
 //constantes y tipos
+const int MAX_JUGADORES = 4;
 typedef tSoporte tSoportes[4];
 
 //funciones

@@ -3,7 +3,8 @@
 
 using namespace std;
 
-void inicializarJugada(tJugada jugada, tAjustes ajustes) {
+void inicializarJugada(tJugada& jugada, tAjustes ajustes) {
+	jugada = new tFicha[MAX_COLUMNAS];
 	for (int f = 0; f < ajustes.numFichas; f++) {
 		jugada[f].color = LIBRE;
 		jugada[f].num = -1;
@@ -70,9 +71,11 @@ void nuevaJugada(tSoporte& soporte, tJugada& jugada, int& jcont) {
 	colorTexto(LIBRE);
 }
 
-bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {
+bool puedePonerFicha(tJugada jugada, tFicha ficha, tAjustes ajustes, bool& iniciojugada) {
 	tFicha aux = jugada[0];
 	tJugada jaux, jaux1;
+	inicializarJugada(jaux, ajustes);
+	inicializarJugada(jaux1, ajustes);
 	int c = 0, caux = 0;
 	while (!fichaVacia(aux)) {
 		jaux[c] = aux;
@@ -81,7 +84,7 @@ bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {
 	}
 	c++;
 	jaux[c - 1] = ficha;
-	jaux[c] = { LIBRE, -1 };
+	//jaux[c] = { LIBRE, -1 };
 	//Se añade a la jugada una ficha auxiliar y vemos si se mantiene la escalera o la serie
 
 	bool escalera1 = esEscalera(jaux);
@@ -109,11 +112,13 @@ bool puedePonerFicha(tJugada jugada, tFicha ficha, bool& iniciojugada) {
 	}
 }
 
-void ponerFicha(tJugada& jugada, tFicha& ficha, bool iniciojugada) {
+void ponerFicha(tJugada& jugada, tFicha& ficha, tAjustes ajustes, bool iniciojugada) {
 	//Se coloca la ficha en la jugada 
 	int c = 0, c2 = 0;
 	tFicha aux;
 	tJugada jaux;
+	inicializarJugada(jaux, ajustes);
+
 	if (!iniciojugada) {
 		aux = jugada[0];
 		while (!fichaVacia(aux)) {
